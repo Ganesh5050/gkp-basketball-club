@@ -122,17 +122,17 @@ export const Hero = () => {
         >
           {/* Main Title with Typewriter Effect */}
           <motion.h1 
-            className="font-display text-6xl md:text-8xl font-bold mb-6 min-h-[160px] md:min-h-[220px] flex flex-col items-center justify-center mt-8"
+            className="font-display text-4xl sm:text-6xl md:text-8xl font-bold mb-6 min-h-[120px] sm:min-h-[160px] md:min-h-[220px] flex flex-col items-center justify-center mt-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <div className="text-foreground mb-4">
+            <div className="text-foreground mb-2 sm:mb-4">
               <TypewriterText 
                 text="GKP" 
                 delay={1000} 
                 speed={200}
-                className="text-6xl md:text-8xl font-bold"
+                className="text-4xl sm:text-6xl md:text-8xl font-bold"
                 onComplete={handleTitleComplete}
               />
             </div>
@@ -142,7 +142,7 @@ export const Hero = () => {
                   text="Basketball Club" 
                   delay={500} 
                   speed={150}
-                  className="text-5xl md:text-7xl font-bold animate-glow-pulse"
+                  className="text-3xl sm:text-5xl md:text-7xl font-bold animate-glow-pulse leading-tight"
                   onComplete={handleSubtitleComplete}
                 />
               </div>
@@ -177,7 +177,7 @@ export const Hero = () => {
           {/* CTA Buttons */}
           {showContent && (
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
@@ -185,7 +185,7 @@ export const Hero = () => {
             <Button
               onClick={handleJoinUsClick}
               size="lg"
-              className="bg-gradient-orange hover:shadow-glow glow-orange-hover text-lg px-12 py-6 font-display font-bold"
+              className="bg-gradient-orange hover:shadow-glow glow-orange-hover text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 font-display font-bold w-full sm:w-auto"
             >
               <motion.span
                 animate={{ scale: [1, 1.05, 1] }}
@@ -199,7 +199,7 @@ export const Hero = () => {
               variant="outline"
               size="lg"
               onClick={handleWatchHighlightsClick}
-              className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-6 font-display"
+              className="border-primary text-primary hover:bg-primary/10 text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 font-display w-full sm:w-auto"
             >
               Watch Highlights
             </Button>
@@ -209,22 +209,22 @@ export const Hero = () => {
           {/* Stats */}
           {showContent && (
             <motion.div 
-              className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-border/20"
+              className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-border/20 px-4"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
             <div className="text-center">
-              <div className="text-3xl font-display font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Active Players</div>
+              <div className="text-2xl sm:text-3xl font-display font-bold text-primary mb-1 sm:mb-2">50+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Active Players</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-display font-bold text-primary mb-2">5+</div>
-              <div className="text-muted-foreground">Years Experience</div>
+              <div className="text-2xl sm:text-3xl font-display font-bold text-primary mb-1 sm:mb-2">5+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-display font-bold text-primary mb-2">15+</div>
-              <div className="text-muted-foreground">Tournaments Won</div>
+              <div className="text-2xl sm:text-3xl font-display font-bold text-primary mb-1 sm:mb-2">15+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Tournaments Won</div>
             </div>
             </motion.div>
           )}
