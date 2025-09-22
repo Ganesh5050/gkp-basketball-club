@@ -91,7 +91,7 @@ export const WhatsAppChat = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-40 w-72 max-w-[calc(100vw-3rem)] max-h-[calc(100vh-8rem)] overflow-y-auto"
+            className="fixed bottom-24 right-6 z-40 w-80 h-[500px] overflow-hidden"
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
@@ -110,9 +110,9 @@ export const WhatsAppChat = () => {
                 </CardTitle>
               </CardHeader>
               
-              <CardContent className="p-3 space-y-3">
+              <CardContent className="p-1.5 space-y-1.5">
                 {/* Welcome Message */}
-                <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg border-l-4 border-green-500">
+                <div className="bg-green-50 dark:bg-green-900/20 p-1.5 rounded-lg border-l-4 border-green-500">
                   <p className="text-xs text-green-800 dark:text-green-200 font-medium">
                     👋 Welcome to GKP Basketball Club!
                   </p>
@@ -122,39 +122,40 @@ export const WhatsAppChat = () => {
                 </div>
 
                 {/* Coach Options */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 bg-gray-50 dark:bg-gray-800 p-1.5 rounded-lg">
                   <p className="text-xs font-medium text-gray-700 dark:text-gray-300">Choose a coach:</p>
-                  {coaches.map((coach, index) => (
-                    <motion.button
-                      key={coach.name}
-                      onClick={() => openWhatsApp(coach.phone, coach.message)}
-                      className="w-full p-3 bg-white dark:bg-gray-800 hover:bg-green-50 dark:hover:bg-green-900/20 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 transition-all duration-200 text-left"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                          <User className="w-4 h-4 text-white" />
+                  <div className="grid grid-cols-2 gap-2">
+                    {coaches.map((coach, index) => (
+                      <motion.button
+                        key={coach.name}
+                        onClick={() => openWhatsApp(coach.phone, coach.message)}
+                        className="w-full p-2 bg-white dark:bg-gray-800 hover:bg-green-50 dark:hover:bg-green-900/20 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 transition-all duration-200 text-left"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="flex flex-col items-center gap-1">
+                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                            <span className="text-xs text-white">📞</span>
+                          </div>
+                          <div className="text-center">
+                            <p className="font-medium text-xs text-gray-900 dark:text-gray-100">{coach.name}</p>
+                            <p className="text-xs text-gray-600 dark:text-gray-400">{coach.role}</p>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <p className="font-medium text-xs text-gray-900 dark:text-gray-100">{coach.name}</p>
-                          <p className="text-xs text-gray-600 dark:text-gray-400">{coach.role}</p>
-                        </div>
-                        <Phone className="w-4 h-4 text-green-500" />
-                      </div>
-                    </motion.button>
-                  ))}
+                      </motion.button>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Quick Messages */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 bg-gray-50 dark:bg-gray-800 p-1.5 rounded-lg">
                   <p className="text-xs font-medium text-gray-700 dark:text-gray-300">Common enquiries:</p>
                   <div className="space-y-1.5">
                     {quickMessages.slice(0, 3).map((message, index) => (
                       <motion.button
                         key={index}
                         onClick={() => openWhatsApp(coaches[0].phone, message)}
-                        className="w-full p-2 text-xs bg-white dark:bg-gray-800 hover:bg-green-50 dark:hover:bg-green-900/20 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 transition-all duration-200 text-left text-gray-800 dark:text-gray-200 hover:text-green-800 dark:hover:text-green-200"
+                        className="w-full p-1 text-xs bg-white dark:bg-gray-800 hover:bg-green-50 dark:hover:bg-green-900/20 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 transition-all duration-200 text-left text-gray-800 dark:text-gray-200 hover:text-green-800 dark:hover:text-green-200"
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.99 }}
                       >
@@ -170,7 +171,7 @@ export const WhatsAppChat = () => {
                 </div>
 
                 {/* Training Hours */}
-                <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-200 dark:border-blue-800">
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-1.5 rounded-lg border border-blue-200 dark:border-blue-800">
                   <div className="flex items-center gap-2 mb-1">
                     <div className="w-4 h-4 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
                       <Clock className="w-3 h-3 text-blue-600 dark:text-blue-400" />
