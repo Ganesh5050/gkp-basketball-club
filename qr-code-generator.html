@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKP Basketball Club - QR Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #FF6B35;
+            margin-bottom: 30px;
+        }
+        .qr-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .info {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #FF6B35;
+        }
+        .download-btn {
+            background: #FF6B35;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .download-btn:hover {
+            background: #e55a2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏀 GKP Basketball Club</h1>
+        <h2>QR Code Generator</h2>
+        
+        <div class="qr-container">
+            <div id="qrcode"></div>
+        </div>
+        
+        <div class="info">
+            <h3>📱 How to Use:</h3>
+            <p><strong>Website URL:</strong> https://gkp-basketball-club.vercel.app</p>
+            <p><strong>Instructions:</strong></p>
+            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                <li>Print this QR code on flyers, posters, or business cards</li>
+                <li>People can scan with their phone camera</li>
+                <li>Website will open directly in their browser</li>
+                <li>Perfect for attracting new players!</li>
+            </ul>
+        </div>
+        
+        <a href="#" class="download-btn" onclick="downloadQR()">📥 Download QR Code</a>
+        <a href="https://gkp-basketball-club.vercel.app" class="download-btn" target="_blank">🌐 Visit Website</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script>
+        const websiteURL = 'https://gkp-basketball-club.vercel.app';
+        
+        // Generate QR Code
+        QRCode.toCanvas(document.getElementById('qrcode'), websiteURL, {
+            width: 300,
+            height: 300,
+            color: {
+                dark: '#000000',
+                light: '#FFFFFF'
+            },
+            margin: 2,
+            errorCorrectionLevel: 'H'
+        }, function (error) {
+            if (error) console.error(error);
+            console.log('QR Code generated successfully!');
+        });
+        
+        // Download function
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            const link = document.createElement('a');
+            link.download = 'gkp-basketball-club-qr-code.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
