@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield Background -->
+  <path d="M100 10L175 50V125C175 159.4 140.6 187.5 100 187.5C59.4 187.5 25 159.4 25 125V50L100 10Z" fill="#1E40AF" stroke="#F97316" stroke-width="3"/>
+  
+  <!-- Top Banner -->
+  <rect x="37.5" y="37.5" width="125" height="25" rx="12.5" fill="#F97316"/>
+  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">BELIEVE ★ ACHIEVE</text>
+  
+  <!-- Main Text -->
+  <text x="100" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="white">GKP</text>
+  
+  <!-- Subtitle -->
+  <text x="100" y="137.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#F97316">.CLUB.</text>
+  
+  <!-- Basketball -->
+  <circle cx="100" cy="162.5" r="18.75" fill="#F97316"/>
+  <path d="M81.25 162.5L118.75 162.5M100 143.75L100 181.25" stroke="white" stroke-width="3.125"/>
+</svg>

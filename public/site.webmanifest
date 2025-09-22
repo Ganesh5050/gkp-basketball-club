@@ -1,0 +1,32 @@
+{
+  "name": "GKP Basketball Club - Ghatkopar",
+  "short_name": "GKP Basketball",
+  "description": "BELIEVE ★ ACHIEVE - Premium Basketball Training & Development in Ghatkopar, Mumbai",
+  "icons": [
+    {
+      "src": "/favicon-16x16.svg",
+      "sizes": "16x16",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-32x32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#FF6B35",
+  "background_color": "#0F0F0F",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "categories": ["sports", "education", "lifestyle"]
+}
