@@ -270,7 +270,7 @@ export const Schedule = () => {
             </motion.div>
           </motion.div>
           <motion.p 
-            className="text-base text-muted-foreground max-w-xl mx-auto leading-relaxed"
+            className="text-base text-gray-700 dark:text-gray-300 max-w-xl mx-auto leading-relaxed"
             variants={fadeInUp}
             transition={{ delay: 0.3 }}
           >
@@ -665,7 +665,7 @@ export const Schedule = () => {
                             </p>
                             <div className="flex items-center gap-2">
                               <span className="font-mono text-sm font-semibold text-gray-900 dark:text-white">
-                                +91 87654 32109
+                                +91 90042 96609
                               </span>
                               <div className="flex gap-2">
                                 <button className="p-2 bg-green-100 dark:bg-green-900 rounded-full hover:bg-green-200 dark:hover:bg-green-800 transition-colors">
@@ -704,7 +704,7 @@ export const Schedule = () => {
                             </p>
                             <div className="flex items-center gap-2">
                               <span className="font-mono text-sm font-semibold text-gray-900 dark:text-white">
-                                +91 98765 43210
+                                
                               </span>
                               <div className="flex gap-2">
                                 <button className="p-2 bg-green-100 dark:bg-green-900 rounded-full hover:bg-green-200 dark:hover:bg-green-800 transition-colors">
