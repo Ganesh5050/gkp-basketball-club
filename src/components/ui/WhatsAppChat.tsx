@@ -20,19 +20,13 @@ export const WhatsAppChat = () => {
     return () => clearTimeout(timer);
   }, [hasAutoOpened]);
 
-  // WhatsApp numbers for coaches
+  // WhatsApp number for coach
   const coaches = [
     {
       name: "Shree Sir",
       role: "Head Coach",
-      phone: "+918765432109",
+      phone: "+919004296609",
       message: "Hi! I'm interested in joining GKP Basketball Club. Can you please provide more information about training sessions and membership?"
-    },
-    {
-      name: "Rishi Sir", 
-      role: "Assistant Coach",
-      phone: "+919876543210",
-      message: "Hello! I'd like to know more about basketball training at GKP Basketball Club. Could you help me with the details?"
     }
   ];
 
@@ -123,8 +117,8 @@ export const WhatsAppChat = () => {
 
                 {/* Coach Options */}
                 <div className="space-y-1.5 bg-gray-50 dark:bg-gray-800 p-1.5 rounded-lg">
-                  <p className="text-xs font-medium text-gray-700 dark:text-gray-300">Choose a coach:</p>
-                  <div className="grid grid-cols-2 gap-2">
+                  <p className="text-xs font-medium text-gray-700 dark:text-gray-300">Message a coach:</p>
+                  <div className="w-full">
                     {coaches.map((coach, index) => (
                       <motion.button
                         key={coach.name}
@@ -133,13 +127,16 @@ export const WhatsAppChat = () => {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <div className="flex flex-col items-center gap-1">
-                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                            <span className="text-xs text-white">📞</span>
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <MessageCircle className="w-4 h-4 text-white" />
                           </div>
-                          <div className="text-center">
-                            <p className="font-medium text-xs text-gray-900 dark:text-gray-100">{coach.name}</p>
+                          <div className="flex-1">
+                            <p className="font-medium text-sm text-gray-900 dark:text-gray-100">{coach.name}</p>
                             <p className="text-xs text-gray-600 dark:text-gray-400">{coach.role}</p>
+                          </div>
+                          <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                            <span className="text-xs">💬</span>
                           </div>
                         </div>
                       </motion.button>
